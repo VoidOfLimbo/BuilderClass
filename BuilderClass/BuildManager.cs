@@ -24,32 +24,32 @@ namespace BuilderClass
             this.builder.Reset();
             switch (type){
                 case BuildOptions.HouseType.Simple:
-                    buildSimple();
+                    buildSimple(4,1,4,16);
                     break;
                 case BuildOptions.HouseType.WithPool:
-                    buildSimple();
+                    buildSimple(6, 3, 8, 20);
                     addPool();
                     break;
                 case BuildOptions.HouseType.WithGarden:
-                    buildSimple();
+                    buildSimple(5, 4, 7, 18);
                     addGarden();
                     break;
                 case BuildOptions.HouseType.withStatue:
-                    buildSimple();
+                    buildSimple(6, 2, 6, 22);
                     addStatue();
                     break;
                 case BuildOptions.HouseType.WithGarage:
-                    buildSimple();
+                    buildSimple(4, 5, 8, 24);
                     addGarage();
                     break;
             }
         }
-        private void buildSimple()
+        private void buildSimple(int windows, int doors, int roofs, int walls)
         {
-            builder.BuidWindows(4);
-            builder.BuildDoors(2);
-            builder.BuildRoofs(4);
-            builder.BuildWalls(16);
+            builder.BuidWindows(windows);
+            builder.BuildDoors(doors);
+            builder.BuildRoofs(roofs);
+            builder.BuildWalls(walls);
         }
         private void addPool()
         {
